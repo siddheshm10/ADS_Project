@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Recommendation System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f0f4ff, #e6f0ff);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #1e3a8a;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 26px;
+        }
+
+        header .nav-buttons button {
+            margin-left: 10px;
+            background-color: #ff5c00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        header .nav-buttons button:hover {
+            background-color: #e64a00;
+        }
+
+        .hero-section {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .hero-text {
+            max-width: 550px;
+            margin-right: 40px;
+        }
+
+        .hero-text h2 {
+            font-size: 36px;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .hero-text button {
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .hero-text button:hover {
+            background-color: #162c6a;
+        }
+
+        .hero-image {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e3a8a;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Restaurant Recommender</h1>
+        <div class="nav-buttons">
+            <button onclick="location.href='/'">Home</button>
+            <button onclick="location.href='/recommend'">Recommend</button>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-text">
+            <h2>Let Your Taste Buds Lead the Way</h2>
+            <p>Whether you're hungry for sushi, burgers, or biryani — we’ve got personalized picks that hit the spot.
+                Discover trending places locals love!</p>
+            <button onclick="location.href='/recommend'">Discover Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='HomeImage.jpg') }}" alt="Recommendation Image">
+        </div>
+    </div>
+
+    <footer>
+        Made with ❤️ by Raju Jadhav
+    </footer>
+</body>
+
+</html>

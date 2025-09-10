@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Restaurant Recommendations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e6f0ff, #ffffff);
+            color: #333;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 26px;
+        }
+
+        header button {
+            background-color: #ff5c00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        header button:hover {
+            background-color: #e64a00;
+        }
+
+        footer {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .middle-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .middle-content h2 {
+            font-size: 30px;
+            color: #1e3a8a;
+            margin-bottom: 25px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 14px 20px;
+            margin-bottom: 20px;
+            border: 2px solid #1e3a8a;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #16307a;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .middle-content h2 {
+                font-size: 24px;
+            }
+
+            input[type="text"], input[type="submit"] {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Restaurant Recommendation System</h1>
+        <div>
+            <button onclick="location.href='/'">Home</button>
+            <button onclick="location.href='/recommend'">Recommend</button>
+        </div>
+    </header>
+    <div class="middle-content">
+        <h2>Find Restaurants Similar To Your Favorite</h2>
+        <form action="/result" method="post">
+            <input type="text" name="restaurant_name" placeholder="e.g., Domino's Pizza" required>
+            <input type="submit" value="Get Recommendations">
+        </form>
+    </div>
+    <footer>
+        Made with ❤️ by Raju Jadhav
+    </footer>
+</body>
+</html>
