@@ -37,7 +37,7 @@ conda create -n restaurant_recommender python=3.10
 conda activate restaurant_recommender
 
 # Clone the repository
-git clone https://github.com/raju2703/ADS_Restaurant_Recommendation_System.git
+git clone https://github.com/siddheshm10/ADS_Project.git
 cd ADS_Restaurant_Recommendation_System/Flask
 
 # Install dependencies
